@@ -8,7 +8,7 @@ client = anthropic.Anthropic(
 
 # Read the small extracted file
 with open("tfplan_small.txt") as f:
-    plan = f.read()
+    plan = f.read().strip()
 
 prompt = f"""
 Analyze this Terraform plan and find:
