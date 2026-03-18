@@ -736,6 +736,8 @@ module "key_pair" {
   #ssh_public_key_path = "./secrets"
   #ssh_public_key_file = "uplift-qa.pub"
   #context             = module.label.context
+  # Required by module, but ignored when enabled = false
+  ssh_public_key_path = ""
   enabled = false
 }
 #####################################################################
