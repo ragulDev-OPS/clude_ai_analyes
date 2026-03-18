@@ -6,10 +6,9 @@ client = anthropic.Anthropic(
     api_key=os.getenv("ANTHROPIC_API_KEY")
 )
 
-# Read only the last 50 lines of tfplan.json
-with open("tfplan.json") as f:
-    lines = f.readlines()
-plan = "".join(lines[-20:])  # <-- Added this line
+# Read the small extracted file
+with open("tfplan_small.txt") as f:
+    plan = f.read()
 
 prompt = f"""
 Analyze this Terraform plan and find:
