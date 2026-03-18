@@ -9,7 +9,7 @@ client = anthropic.Anthropic(
 # Read only the last 50 lines of tfplan.json
 with open("tfplan.json") as f:
     lines = f.readlines()
-plan = "".join(lines[-50:])  # <-- Added this line
+plan = "".join(lines[-20:])  # <-- Added this line
 
 prompt = f"""
 Analyze this Terraform plan and find:
