@@ -730,13 +730,13 @@ module "redis-sg-new" {
 module "key_pair" {
   source = "../bsetec/terraform-aws-key-pair-0.20.0"
 
-  name = "key-pair"
+  #name = "key-pair"
 
-  generate_ssh_key    = false
-  ssh_public_key_path = "./secrets"
-  ssh_public_key_file = "uplift-qa.pub"
-  context             = module.label.context
-  create_key_pair = false
+  #generate_ssh_key    = false
+  #ssh_public_key_path = "./secrets"
+  #ssh_public_key_file = "uplift-qa.pub"
+  #context             = module.label.context
+  enabled = false
 }
 #####################################################################
 ## EKS
