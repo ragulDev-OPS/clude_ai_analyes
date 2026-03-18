@@ -736,6 +736,7 @@ module "key_pair" {
   ssh_public_key_path = "./secrets"
   ssh_public_key_file = "uplift-qa.pub"
   context             = module.label.context
+  create_key_pair = false
 }
 #####################################################################
 ## EKS
