@@ -6,7 +6,6 @@ client = anthropic.Anthropic(
     api_key=os.getenv("ANTHROPIC_API_KEY")
 )
 
-# Read the small extracted file
 with open("tfplan_small.txt") as f:
     plan = f.read().strip()
 
